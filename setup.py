@@ -51,6 +51,11 @@ setup_info = dict(
     # Package info
     packages=create_package_list('pdftex'),
 
+    install_requires=[
+        'matplotlib',
+        'pillow'
+      ],
+
     # Add _ prefix to the names of temporary build dirs
     options={
         'build': {'build_base': '_build'},
