@@ -19,3 +19,23 @@ ax.plot(np.arange(5), np.arange(5)*5+1)
 ax.set_xlabel("\$\\alpha\$")
 fig.savefig('test.pdf_tex')
 ```
+
+If everything goes through as it should, two files are generated:
+
+``test.pdf_tex``
+``test.pdf``
+
+Put these two files always together when using in your LaTeX document. 
+
+An example of importing the generated figures in LaTex document is:
+
+```
+\begin{figure}
+    \centering
+    \def\svgwidth{12.0cm}
+    \input{test.pdf_tex}
+    \caption{A sample figure.}
+    \label{fig:test}
+\end{figure}
+```
+
