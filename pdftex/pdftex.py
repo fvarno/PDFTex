@@ -32,12 +32,13 @@ _log = logging.getLogger(__name__)
 
 backend_version = mpl.__version__
 
+register_backend('pdftex', 'PdfTex', 'PdfTex File Format')
+
 # ----------------------------- pdftex backend
 # ----------------------------------------------------------------------
 # SimpleXMLWriter class
 #
-# Based on an original by Fredrik Lundh, but modified here to:
-# SVG backend is altered to support pdf_tex
+# Based on an original by Fredrik Lundh and the SVG backend of matplotlib
 
 
 def escape_cdata(s):
@@ -1136,7 +1137,6 @@ class FigureCanvasPdfTex(FigureCanvasBase):
     fixed_dpi = 72
 
     def print_pdf_tex(self, filename, *args, **kwargs):
-        register_backend('pdftex', 'PdfTex', 'PdfTex File Format')
         _dpi = 72
         rcParams.update({"svg.fonttype": 'none'})
 
@@ -1161,10 +1161,6 @@ class FigureCanvasPdfTex(FigureCanvasBase):
 
         subprocess.run(["inkscape", "--export-filename={}.pdf".format('.'.join(filename.split('.')[:-1])),
                         filename, "--export-dpi={}".format(int(_dpi)), "--export-latex"])
-        # try:
-        #     os.remove(filename)
-        # except:
-        #     print("Error while deleting file ", filename)
 
     def _print_pdftex(
             self, filename, fh, *, dpi=72, bbox_inches_restore=None, **kwargs):
