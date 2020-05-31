@@ -5,7 +5,7 @@ An easy way to generate PDF files which could be imported into overleaf with pyt
 ``apt get install inkscape``
 
 ## Installation
-``pip install git+https://github.com/fvarno/PDFTex#egg=PDFTex``
+``pip install pdftex==1.0.0``
 
 ## Example
 

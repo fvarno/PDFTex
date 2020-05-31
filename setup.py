@@ -45,9 +45,8 @@ setup_info = dict(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python',
-        'Topic :: Productivity',
         'Topic :: Scientific/Engineering :: Visualization',
-        'Topic :: Text Processing :: Markup :: LaTeX'
+        'Topic :: Text Processing :: Markup :: LaTeX',
         'Framework :: Matplotlib',
     ],
 
