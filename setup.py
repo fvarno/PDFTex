@@ -38,14 +38,17 @@ setup_info = dict(
     long_description=long_description,
     license='GNU General Public License v3.0',
     classifiers=[
-        'Development Status :: 0- initial/Nightly',
-        'Environment :: Ubuntu 20.04',
-        'Intended Audience :: Latex and Python users',
-        'License :: OSI Approved :: GNU General Public License v3.0',
+        'Development Status :: 2 - Pre-Alpha ',
+        'Environment :: Console',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: Education',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python',
         'Topic :: Productivity',
-        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Scientific/Engineering :: Visualization',
+        'Topic :: Text Processing :: Markup :: LaTeX'
+        'Framework :: Matplotlib',
     ],
 
     # Package info
